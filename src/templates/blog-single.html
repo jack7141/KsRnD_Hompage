@@ -1,0 +1,241 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<div class="intro-section site-blocks-cover innerpage" style="background-image: url({% static 'images/one.jpg' %});">
+  <div class="container">
+    <div class="row align-items-center text-center border">
+      <div class="col-lg-12 mt-5" data-aos="fade-up">
+        {% if id == "ci" %}
+        <h1>인사말</h1>
+        {% endif %}
+        {% if id == "history" %}
+        <h1>연혁</h1>
+        {% endif %}
+        {% if id == "development" %}
+        <h1>개발실적</h1>
+        {% endif %}
+        {% if id == "OrganizationChart" %}
+        <h1>조직도</h1>
+        {% endif %}
+        {% if id == "site" %}
+        <h1>위치안내</h1>
+        {% endif %}
+        <p class="text-white text-center">
+          <a href="/">Home</a>
+          <span class="mx-2">/</span>
+          <span>Blog Single</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<section class="site-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 blog-content">
+        {% if id == "ci" %}
+        <p class="lead">저희 홈페이지를 방문해주신 여러분께 감사드립니다.</p>
+        <p>센서 및 센서 응용기술개발 전문기업인</p>
+
+        <blockquote>
+          <p>(주)케이에스알앤디는 2010년 본격적인 기업활동을 시작하였습니다.</p>
+        </blockquote>
+
+        <p>다양한 센서를 이용하여 분석 및 측정시스템을 개발함으로써 전문지식을 축적하였고, 더 나아가 기초기술을 기반으로 기존 수입에 의존해온 센서모듈들을 국산화하여 국내 보급 뿐만 아니라 해외시장에
+          수출하고 있습니다.</p>
+        <p>최근에는 발전하는 IT환경에 발맞추어 유·무선통신과 PC 소프트웨어를 아우르는 다양한 솔루션 개발도 함께 하고 있습니다.</p>
+        <p>앞으로도 저희 회사는 센서 및 환경 분야에서 끊임없는 혁신과 개발을 통하여 새로운 기술과 서비스를 선보일 것을 약속드립니다.</p>
+        <p>“클린”기업을 모토로 해서 투명한 회사경영을 실천할 수 있도록 모든 임직원이 끊임없이 노력하겠습니다.</p>
+
+        <p>감사합니다.</p>
+        {% endif %}
+
+
+        {% if id == "history" %}
+        <div>
+          <p class="lead"><strong style="color: blue; size: 10px">(주)케이에스알앤디</strong>는 전문적인 지식을 바탕으로 풍부한 경험을 가지고 있습니다.
+          </p>
+        </div>
+        <div style="padding-top: 40px; border-bottom: 1px solid #e6e6e6">
+          <blockquote>
+            <p>
+              <h4><strong>2016</strong></h4>
+            </p>
+          </blockquote>
+          <p>교통안전공단 자동차검사용 전조등시험기(반자동) 납품 완료(16개소)</p>
+          <p>교통안전공단 자동차검사용 전조등시험기(자동) 납품 완료(6개소)</p>
+        </div>
+        <div style="padding-top: 40px; border-bottom: 1px solid #e6e6e6">
+          <h4><strong>2015</strong></h4>
+          <p>교통안전공단 자동차검사용 전조등시험기(자동) 납품 완료(1개소)</p>
+        </div>
+        <div style="padding-top: 40px; border-bottom: 1px solid #e6e6e6">
+          <h4><strong>2013</strong></h4>
+          <p>기업부설연구소 설립</p>
+          <p>보건복지부 미래융합의료기기개발 사업 과제 협약(5개년)</p>
+        </div>
+        <div style="padding-top: 40px; border-bottom: 1px solid #e6e6e6">
+          <h4><strong>2011</strong></h4>
+          <p>벤처기업 자격 획득</p>
+          <p>중소기업청 융복합 기술개발 사업 과제 협약</p>
+        </div>
+        <div style="padding-top: 40px; border-bottom: 1px solid #e6e6e6">
+          <h4><strong>2010</strong></h4>
+          <p>(주)케이에스알앤디 법인 설립</p>
+          <p>밧데리 측정방식 RPM 센서 개발</p>
+          <p>진동 측정방식 RPM 센서 개발</p>
+          <p>유로형 광투과식 매연측정기 개발</p>
+          <p>수시점검용 모바일 측정시스템 개발 [아이폰 및 안드로이드 스마트폰 앱]</p>
+          <p>미국 University of Texas 인슐린펌프 출력 추적시스템 개발</p>
+        </div>
+        {% endif %}
+
+        {% if id == "development" %}
+        <div>
+          <p class="lead"><strong style="color: blue; size: 10px">(주)케이에스알앤디</strong>는 설립 이전부터 다양하고 풍부한 경험을 쌓아왔습니다.
+          </p>
+        </div>
+        <div style="padding-top: 40px; border-bottom: 1px solid #e6e6e6">
+          <blockquote>
+            <p>
+              <h4><strong>2016</strong></h4>
+            </p>
+          </blockquote>
+          <p>자동차검사용 전조등시험기(반자동) 개발 및 출시</p>
+        </div>
+        <div style="padding-top: 40px; border-bottom: 1px solid #e6e6e6">
+          <h4><strong>2015</strong></h4>
+          <p>자동차검사용 전조등시험기(수동) 출시</p>
+          <p>자동차검사용 전조등시험기(자동) 개발 및 출시</p>
+        </div>
+        <div style="padding-top: 40px; border-bottom: 1px solid #e6e6e6">
+          <h4><strong>2014</strong></h4>
+          <p>자동차검사용 전조등시험기(수동) 개발 완료</p>
+        </div>
+        <div style="padding-top: 40px; border-bottom: 1px solid #e6e6e6">
+          <h4><strong>2013</strong></h4>
+          <p>전기화학 실험용 I/V Controller KS-10A 개발</p>
+        </div>
+        <div style="padding-top: 40px; border-bottom: 1px solid #e6e6e6">
+          <h4><strong>2012</strong></h4>
+          <p>포노마그네틱 센서 측정 방식 RPM 센서 개발</p>
+          <p>블루투스 OBDⅡ 통신 방식 RPM 센서 개발</p>
+        </div>
+        <div style="padding-top: 40px; border-bottom: 1px solid #e6e6e6">
+          <h4><strong>2010</strong></h4>
+          <p>(주)케이에스알앤디 법인 설립</p>
+          <p>밧데리 측정방식 RPM 센서 개발</p>
+          <p>진동 측정방식 RPM 센서 개발</p>
+          <p>유로형 광투과식 매연측정기 개발</p>
+          <p>수시점검용 모바일 측정시스템 개발 [아이폰 및 안드로이드 스마트폰 앱]</p>
+          <p>인슐린펌프 출력 추적시스템 개발 - 미국 University of Texas</p>
+        </div>
+        <div style="padding-top: 40px; border-bottom: 1px solid #e6e6e6">
+          <h4><strong>2008</strong></h4>
+          <p>축정렬검사기 개발 - 어큐라인(주)</p>
+          <p>무선변위측정기 개발 - 어큐라인(주)</p>
+        </div>
+        <div style="padding-top: 40px; border-bottom: 1px solid #e6e6e6">
+          <h4><strong>2007</strong></h4>
+          <p>교통안전공단 서버시스템(VIMS)에 연결되는 배기가스 측정 PC 프로그램 개발</p>
+        </div>
+        <div style="padding-top: 40px; border-bottom: 1px solid #e6e6e6">
+          <h4><strong>2006</strong></h4>
+          <p>광투과식 매연측정기 개발 - 큐로테크(주)</p>
+        </div>
+        <div style="padding-top: 40px; border-bottom: 1px solid #e6e6e6">
+          <h4><strong>2004</strong></h4>
+          <p>온도계 개발 - 서미트(주)</p>
+        </div>
+        <div style="padding-top: 40px; border-bottom: 1px solid #e6e6e6">
+          <h4><strong>2000</strong></h4>
+          <p>단순 전자 저울, 계수 전자 저울, 유통용 전자 저울 개발 - 카스(주)</p>
+          <p>2Gas, 3Gas 센서 모듈 및 분석기 개발 - 큐로테크(주)</p>
+        </div>
+        <div style="padding-top: 40px; border-bottom: 1px solid #e6e6e6">
+          <h4><strong>2000 이전</strong></h4>
+          <p>휴대형 안전용 가스측정기 개발 - 서미트(주)</p>
+          <p>온도계(Thermocouple 타입, Thermistor 타입), 습도계, 전기계측기 개발 - 서미트(주)</p>
+          <p>온도컨트롤 시스템 개발 - 녹십자</p>
+          <p>TMS 시스템(대기환경) 개발 - 울산공단</p>
+          <p>보일러 연소효율측정기 개발</p>
+        </div>
+
+        {% endif %}
+
+        {% if id == "OrganizationChart" %}
+        <div style="padding-top: 40px; border-bottom: 1px solid #e6e6e6">
+          <blockquote>
+            <p>
+              <h4><strong>조직도</strong></h4>
+            </p>
+          </blockquote>
+        </div>
+        <div>
+            <img src="{% static 'images/org.png' %}" alt="Image placeholder" class="img-fluid mb-4">
+        </div>
+        {% endif %}
+
+        {% if id == "site" %}
+        <div style="padding-top: 40px; border-bottom: 1px solid #e6e6e6">
+          <blockquote>
+            <p>
+              <h4><strong>위치안내</strong></h4>
+            </p>
+          </blockquote>
+        <div id="map" style="width:700px;height:400px;"></div>
+        <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=0fd0c3a5b246a3f9347410079bd9fc34"></script>
+          <script>
+            var markerPosition =  new kakao.maps.LatLng(37.5170648, 126.7621922);
+
+            var marker = {
+              position : markerPosition
+            };
+
+            var container = document.getElementById('map');
+            var options = {
+              center: new kakao.maps.LatLng(37.5170648, 126.7621922),
+              level: 3,
+              marker : marker
+            };
+        
+            var map = new kakao.maps.StaticMap(container, options);
+          </script>
+        </div>
+                <div style="padding-top: 40px; border-bottom: 1px solid #e6e6e6">
+                    <blockquote>
+                      <p>
+                        <h4><strong>대중교통</strong></h4>
+                      </p>
+                      <p>버스 : 부천 송내역 2번 출구 북부광장 → 7-1, 7-2, 7-3번 버스 승차 → 부천테크노파크 하차</p>
+                      <p>택시 : 부천 송내역 2번 출구 북부광장 → 택시 승차 → 부천테크노파크 하차</p>
+                    </blockquote>
+                  </div>
+
+                  <div style="padding-top: 40px; border-bottom: 1px solid #e6e6e6">
+                      <blockquote>
+                        <p>
+                          <h4><strong>승용차</strong></h4>
+                        </p>
+                        <p style="padding-top: 30px"><h6>서울외곽순환도로</h6></p>
+                        <p>송내IC에서 우회전 → 송내지하차도 진입 → 3km 직진 후 우회전 → 부천테크노파크</p>
+                        <p>중동IC에서 좌회전 → 200m 전방 고가도로 밑에서 좌회전 → 중동대로따라 1km 직진 후 우회전 → 부천테크노파크</p>
+ 
+                          <p style="padding-top: 30px"><h6>경인고속도로</h6></p>
+                          <p>부천IC에서 좌회전(부천시내 방면) → 200m 전방 내동사거리 우회전 → 300m 직진 후 좌회전 → 부천테크노파크</p>
+                      </blockquote>
+                    </div>
+        {% endif %}
+      </div>
+      <div class="col-md-4 sidebar">
+
+        <div class="sidebar-box">
+          <img src="{% static 'images/mylogo.jpeg' %}" alt="Image placeholder" class="img-fluid mb-4">
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock content %}

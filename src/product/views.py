@@ -22,10 +22,17 @@ def works(request, id):
 
     news = get_object_or_404(Category, title=id)
     post = Post.objects.filter(categories=news)
-    print(post)
+
     context = {
         'object_list' : post
     }
     return render(request, 'works.html', context)
+
+def introduce(request,id):
+    print(id)
+    context = {
+        'id' : id
+    }
+    return render(request, 'blog-single.html', context)
 
 
