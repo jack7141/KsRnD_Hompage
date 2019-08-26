@@ -1,137 +1,99 @@
 {% extends "base.html" %}
 {% load static %}
-
 {% block content %}
-    <div class="hero-slide owl-carousel site-blocks-cover">
-      <div class="intro-section" style="background-image: url({% static 'images/car_3.jpg' %});">
-        <div class="container">
-          <div class="row align-items-center">
-            <div class="col-lg-12 mx-auto text-center" data-aos="fade-up">
-              <h1>Sensor and sensor application<strong> technology</strong> development company</h1>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="intro-section" style="background-image: url({% static 'images/banner2.jpg' %});">
-        <div class="container">
-          <div class="row align-items-center">
-            <div class="col-lg-12 mx-auto text-center" data-aos="fade-up">
-              <span class="d-block"></span>
-              <h1>Constant <strong>innovation </strong>and <strong>development</strong></h1>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="site-section block-3">
-      <div class="container">
-
-        <div class="mb-5">
-          <h3 class="section-subtitle">Our Projects</h3>
-          <h2 class="section-title mb-4">Explore Our <strong>Recent Projects</strong></h2>
-        </div>
-
-        <div class="projects-carousel-wrap">
-          <div class="owl-carousel owl-slide-3">
-
-            <a href="/project">
-              <div class="project-item">
-                <div class="project-item-contents">
-                  <span class="project-item-category">HeadLight</span>
-                  <h2 class="project-item-title">
-                    Auto Tester
-                  </h2>
-                </div>
-                <img src="{% static 'images/Tester.jpg' %}" alt="Image" class="img-fluid">
-              </div>
-            </a>
-
-            <a href="/project">
-              <div class="project-item">
-                <div class="project-item-contents">
-                  <span class="project-item-category">Rpm Test</span>
-                  <h2 class="project-item-title">
-                    Rpm Tester
-                  </h2>
-                </div>
-                <img src="{% static 'images/Rpm.jpg' %}" alt="Image" class="img-fluid">
-              </div>
-            </a>
-
-            <a href="/project">
-              <div class="project-item">
-                <div class="project-item-contents">
-                  <span class="project-item-category">Sensor</span>
-                  <h2 class="project-item-title">
-                    Sensor Tester
-                  </h2>
-                </div>
-                <img src="{% static 'images/Test1234.jpg' %}" alt="Image" class="img-fluid">
-              </div>
-            </a>
-
-            <a href="/project">
-              <div class="project-item">
-                <div class="project-item-contents">
-                  <span class="project-item-category">Control System</span>
-                  <h2 class="project-item-title">
-                    Control Sensor
-                  </h2>
-                </div>
-                <img src="{% static 'images/abc.jpg' %}" alt="Image" class="img-fluid">
-              </div>
-            </a>
-          </div>
+<div class="hero-slide owl-carousel site-blocks-cover">
+  <div class="intro-section" style="background-image: url({% static 'images/car_3.jpg' %});">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-12 mx-auto text-center" data-aos="fade-up">
+          <h1>Sensor and sensor application<strong> technology</strong> development company</h1>
         </div>
       </div>
     </div>
-
-    <div class="site-section bg-light">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-12 mb-5 text-left">
-            <h3 class="section-subtitle">Blog</h3>
-            <h2 class="section-title text-black mb-4">News &amp; Updates</h2>
+  </div>
+  <div class="intro-section" style="background-image: url({% static 'images/banner2.jpg' %});">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-12 mx-auto text-center" data-aos="fade-up">
+          <span class="d-block"></span>
+          <h1>Constant <strong>innovation </strong>and <strong>development</strong></h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="site-section block-3">
+  <div class="container">
+    <div class="mb-5">
+      <h3 class="section-subtitle">Our Projects</h3>
+      <h2 class="section-title mb-4">Explore Our <strong>Recent Projects</strong></h2>
+    </div>
+    <div class="projects-carousel-wrap">
+      <div class="owl-carousel owl-slide-3">
+        {% for obj in object_list %}
+          {% for cat in obj.categories.all %}
+          <a href="{{ obj.get_absolute_url }}">
+            <div class="project-item">
+              <div class="project-item-contents">
+                <span class="project-item-category">
+                  {{ cat }}
+                </span>
+                <h2 class="project-item-title">
+                  {{ obj.thumbnail_detail }}
+                </h2>
+              </div>
+              <img src="{{ obj.thumbnail.url }}" alt="Image" class="img-fluid">
+            </div>
+          </a>
+          {% endfor %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+<div class="site-section bg-light">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 mb-5 text-left">
+        <h3 class="section-subtitle">Blog</h3>
+        <h2 class="section-title text-black mb-4">News &amp; Updates</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 mb-4 mb-lg-0 col-lg-4">
+        <div class="blog-entry">
+          <a href="#" class="img-link">
+            <img src="{% static 'images/hero_1.jpg' %}" alt="Image" class="img-fluid">
+          </a>
+          <div class="blog-entry-contents">
+            <h3><a href="#">Top Companies That Are Best In Industrial Business</a></h3>
+            <div class="meta">Posted by <a href="#">Admin</a> In <a href="#">News</a></div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-6 mb-4 mb-lg-0 col-lg-4">
-            <div class="blog-entry">
-              <a href="#" class="img-link">
-                <img src="{% static 'images/hero_1.jpg' %}" alt="Image" class="img-fluid">
-              </a>
-              <div class="blog-entry-contents">
-                <h3><a href="#">Top Companies That Are Best In Industrial Business</a></h3>
-                <div class="meta">Posted by <a href="#">Admin</a> In <a href="#">News</a></div>
-              </div>
-            </div>
+      </div>
+      <div class="col-md-6 mb-4 mb-lg-0 col-lg-4">
+        <div class="blog-entry">
+          <a href="#" class="img-link">
+            <img src="{% static 'images/hero_1.jpg' %}" alt="Image" class="img-fluid">
+          </a>
+          <div class="blog-entry-contents">
+            <h3><a href="#">Top Companies That Are Best In Industrial Business</a></h3>
+            <div class="meta">Posted by <a href="#">Admin</a> In <a href="#">News</a></div>
           </div>
-          <div class="col-md-6 mb-4 mb-lg-0 col-lg-4">
-            <div class="blog-entry">
-              <a href="#" class="img-link">
-                <img src="{% static 'images/hero_1.jpg' %}" alt="Image" class="img-fluid">
-              </a>
-              <div class="blog-entry-contents">
-                <h3><a href="#">Top Companies That Are Best In Industrial Business</a></h3>
-                <div class="meta">Posted by <a href="#">Admin</a> In <a href="#">News</a></div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 mb-4 mb-lg-0 col-lg-4">
-            <div class="blog-entry">
-              <a href="#" class="img-link">
-                <img src="{% static 'images/hero_1.jpg' %}" alt="Image" class="img-fluid">
-              </a>
-              <div class="blog-entry-contents">
-                <h3><a href="#">Top Companies That Are Best In Industrial Business</a></h3>
-                <div class="meta">Posted by <a href="#">Admin</a> In <a href="#">News</a></div>
-              </div>
-            </div>
+        </div>
+      </div>
+      <div class="col-md-6 mb-4 mb-lg-0 col-lg-4">
+        <div class="blog-entry">
+          <a href="#" class="img-link">
+            <img src="{% static 'images/hero_1.jpg' %}" alt="Image" class="img-fluid">
+          </a>
+          <div class="blog-entry-contents">
+            <h3><a href="#">Top Companies That Are Best In Industrial Business</a></h3>
+            <div class="meta">Posted by <a href="#">Admin</a> In <a href="#">News</a></div>
           </div>
         </div>
       </div>
     </div>
+  </div>
+</div>
 {% endblock content %}

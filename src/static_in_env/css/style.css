@@ -579,7 +579,7 @@ h1, h2, h3, h4, h5,
 
   /* 헤더 이미지 사이즈 조정 */
   .intro-section, .intro-section .container .row {
-    height: 80vh;
+    height: 60vh;
     min-height: 500px; 
     }
   .intro-section.innerpage, .intro-section.innerpage .container .row {
